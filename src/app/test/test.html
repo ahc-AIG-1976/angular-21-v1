@@ -1,0 +1,16 @@
+<hr/>
+<div class="videojuegos">
+    <h2>Liastado de videojuegos</h2>
+    <ul>
+        @for (juego of videojuegos; track juego) {
+            <li>{{juego}}</li>
+        } @empty {
+            <li>No hay videojuegos disponibles</li>
+        }
+    </ul>
+    <p>Muestra la variable 'nuevoJuego': {{nuevoJuego}}
+    <br>
+    <br>
+    <input [(ngModel)]="nuevoJuego" (keyup.enter)="addJuego()" type="text" placeholder="Agrega un nuevo juego" />
+    <button (click)="addJuego()">Añadir</button>
+</div>
