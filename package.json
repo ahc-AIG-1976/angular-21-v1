@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "git add . && git commit -m \"Actualización automática\" && git push && ng build --base-href /angular-21-v1/ && npx angular-cli-ghpages --dir=dist/angular-21-v1/browser"
   },
   "prettier": {
     "printWidth": 100,
