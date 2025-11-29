@@ -1,0 +1,10 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;  /* Crece para llenar el espacio entre header y footer */
+  padding: 2rem;
+}
