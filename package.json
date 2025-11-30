@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "git add . && git commit -m \"Actualización automática\" && git push && ng build --base-href /angular-21-v1/ && npx angular-cli-ghpages --dir=dist/angular-21-v1/browser"
+    "gh-deploy": "ng build --base-href /angular-21-v1/ && npx angular-cli-ghpages --dir=dist/angular-21-v1/browser",
+    "deploy-full": "git add . && git commit -m \"Actualización automática\" && git push && npm run gh-deploy"
   },
   "prettier": {
     "printWidth": 100,
