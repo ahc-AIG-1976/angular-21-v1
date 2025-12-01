@@ -21,22 +21,22 @@ slides: Slide[] = [
       title: '🚀 ¿Qué es Angular?',
       subtitle: '',
       content: '',
-      image: '/assets/s1.jpg' 
+      image: 'assets/s1.jpg' 
     },
     {
-      title: '📦 Instalación y Setup',
+      title: '🚀 ¿Qué es Angular?',
       subtitle: '',
       content: '',
       image: 'assets/s2.jpg' 
     },
     {
-      title: '🧱 Componentes: Los Bloques del Edificio',
-      subtitle: 'Todo en Angular se construye con Componentes',
+      title: '🚀 ¿Qué es Angular?',
+      subtitle: '',
       content: '',
       image: 'assets/s3.jpg' 
     },
     {
-      title: '🔀 Control Flow: Lógica en tu HTML',
+      title: '🚀 ¿Qué es Angular?',
       subtitle: '',
       content: '',
       image: 'assets/s4.jpg' 

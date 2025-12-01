@@ -20,7 +20,7 @@ export class Enrutadores {
       title: '🚀 Enrutadores',
       subtitle: '',
       content: '',
-      image: '/assets/s11.jpg' 
+      image: 'assets/s11.jpg' 
     },
     {
       title: '🚀 Enrutadores',

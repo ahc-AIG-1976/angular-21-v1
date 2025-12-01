@@ -17,28 +17,28 @@ interface Slide {
 })
 export class Componentes {
  slides: Slide[] = [
-       {
-      title: '🧑‍💻 Despliegue Automatizado',
-      subtitle: 'De Local a la Web en un Comando',
-      content: 'Con `npm run deploy`, automatiza Git commits, el build de Angular y el despliegue en GitHub Pages. ¡Simplifica tu flujo de trabajo!',
+    {
+      title: '🧱 Componentes: Los Bloques del Edificio',
+      subtitle: '',
+      content: '',
       image: 'assets/s5.jpg' 
     },
     {
-      title: '🚀 ¿Qué es Angular?',
-      subtitle: 'El Framework para Aplicaciones Web Modernas',
-      content: 'Angular es un framework de desarrollo de JavaScript, creado por Google, para construir Single Page Applications (SPA) dinámicas y reactivas.',
+      title: '🧱 Componentes: Los Bloques del Edificio',
+      subtitle: '',
+      content: '',
       image: '/assets/s6.jpg' 
     },
     {
-      title: '📦 Instalación y Setup',
-      subtitle: 'Tu Primeros Pasos con Angular CLI',
-      content: 'Instala Angular CLI globalmente con `npm install -g @angular/cli`. Luego, crea tu proyecto con `ng new mi-app` y arráncalo con `ng serve`.',
+      title: '🧱 Componentes: Los Bloques del Edificio',
+      subtitle: '',
+      content: '',
       image: 'assets/s7.jpg' 
     },
     {
       title: '🧱 Componentes: Los Bloques del Edificio',
-      subtitle: 'Todo en Angular se construye con Componentes',
-      content: 'Un componente es una unidad independiente con su propia lógica (TS), vista (HTML) y estilo (CSS). ¡Son la base de tu UI!',
+      subtitle: '',
+      content: '',
       image: 'assets/s8.jpg' 
     }
   ];
