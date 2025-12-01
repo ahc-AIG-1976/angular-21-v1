@@ -11,7 +11,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class Header {
   isMenuOpen = false;
-  title = 'Actividad 2: Tutorial de Angular por Ángel Herrera';
+  title = 'Tutorial de Angular por Ángel Herrera';
   
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

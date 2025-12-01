@@ -1,22 +1,20 @@
-<div class="slider-container">
-  @for (slide of slides; track $index) {
-    @if ($index === currentSlideIndex) {
-      <div class="slide-content">
-          <img [src]="slide.image" [alt]="slide.title" class="slide-image">
-      </div>
-    }
-  }
+<section class="tutorial-section">
+  <div class="container">
+    
+    <div class="header-video">
+      <h2>Video Tutorial Práctico de Angular</h2>
+      <p>Aprende Angular paso a paso viendo este video.</p>
+    </div>
 
-  <div class="slider-buttons">
-    <button class="nav-button" (click)="goToPreviousSlide()">&#10094;</button> <button class="nav-button" (click)="goToNextSlide()">&#10095;</button>     </div>
-
-  <div class="navigation-dots">
-    @for (slide of slides; track $index) {
-      <span 
-        class="dot" 
-        [class.active]="$index === currentSlideIndex" 
-        (click)="goToSlide($index)"
-      ></span>
-    }
+    <div class="video-wrapper">
+      <video 
+        [src]="videoSrc" 
+        controls 
+        controlsList="nodownload"
+        class="responsive-video">
+        
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
   </div>
-</div>
+</section>

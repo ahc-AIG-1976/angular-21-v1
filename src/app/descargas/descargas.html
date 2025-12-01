@@ -1,0 +1,40 @@
+<section class="downloads-section">
+  <div class="container">
+    <h2 class="section-title">Material del Curso</h2>
+    <p class="section-subtitle">Descarga los recursos necesarios para seguir el tutorial offline.</p>
+
+    <div class="cards-grid">
+      
+      <div class="download-card video-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-play-circle"></i>
+        </div>
+        <div class="card-content">
+          <h3>Video Tutorial</h3>
+          <p>Grabación completa de la sesión práctica en alta definición (1080p).</p>
+          <span class="file-info">MP4 • 1.2 GB</span>
+          
+          <button class="btn-download" (click)="descargar('video')">
+            <i class="fas fa-download"></i> Descargar Video
+          </button>
+        </div>
+      </div>
+
+      <div class="download-card pdf-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-file-pdf"></i>
+        </div>
+        <div class="card-content">
+          <h3>Guía paso a paso</h3>
+          <p>Documentación escrita con todos los snippets de código y diagramas.</p>
+          <span class="file-info">PDF • 15 MB</span>
+          
+          <button class="btn-download secondary" (click)="descargar('pdf')">
+            <i class="fas fa-download"></i> Descargar PDF
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

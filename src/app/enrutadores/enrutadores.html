@@ -1,0 +1,22 @@
+<div class="slider-container">
+  @for (slide of slides; track $index) {
+    @if ($index === currentSlideIndex) {
+      <div class="slide-content">
+          <img [src]="slide.image" [alt]="slide.title" class="slide-image">
+      </div>
+    }
+  }
+
+  <div class="slider-buttons">
+    <button class="nav-button" (click)="goToPreviousSlide()">&#10094;</button> <button class="nav-button" (click)="goToNextSlide()">&#10095;</button>     </div>
+
+  <div class="navigation-dots">
+    @for (slide of slides; track $index) {
+      <span 
+        class="dot" 
+        [class.active]="$index === currentSlideIndex" 
+        (click)="goToSlide($index)"
+      ></span>
+    }
+  </div>
+</div>
