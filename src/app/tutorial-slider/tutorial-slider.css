@@ -6,7 +6,7 @@
 }
 
 .container {
-  max-width: 900px; /* Ancho máximo estilo "Cine" */
+  max-width: 900px; 
   margin: 0 auto;
 }
 
@@ -24,10 +24,10 @@
 /* ESTILOS DEL VIDEO */
 .video-wrapper {
   width: 100%;
-  background: #000; /* Fondo negro por si el video tiene otro ratio */
+  background: #000; 
   border-radius: 12px;
-  overflow: hidden; /* Para que el video respete el border-radius */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Sombra elegante */
+  overflow: hidden; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
   margin-bottom: 2rem;
   position: relative;
 }
@@ -48,7 +48,7 @@
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid #eee;
-  flex-wrap: wrap; /* Para móviles */
+  flex-wrap: wrap; 
   gap: 1rem;
 }
 

@@ -1,7 +1,7 @@
 /* Contenedor principal */
 .downloads-section {
   padding: 4rem 1rem;
-  background-color: #f9f9f9; /* Fondo gris muy suave para diferenciar del blanco */
+  background-color: #f9f9f9; 
   font-family: 'Roboto', sans-serif;
 }
 
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* Para que se adapte a móviles */
+  flex-wrap: wrap; 
 }
 
 /* Estilo de la Tarjeta */
@@ -47,7 +47,7 @@
 
 .download-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(221, 0, 49, 0.15); /* Sombra rojiza suave */
+  box-shadow: 0 10px 30px rgba(221, 0, 49, 0.15); 
 }
 
 /* Iconos grandes */
@@ -57,11 +57,11 @@
 }
 
 .video-card .icon-wrapper {
-  color: #DD0031; /* Rojo Angular */
+  color: #DD0031;
 }
 
 .pdf-card .icon-wrapper {
-  color: #1976D2; /* Azul para PDF (estándar visual) */
+  color: #1976D2; 
 }
 
 /* Texto de la tarjeta */
@@ -119,7 +119,7 @@
 
 /* Botón Secundario (Estilo outline o diferente color si prefieres) */
 .btn-download.secondary {
-  background: #2c3e50; /* Un gris oscuro/azul para diferenciar */
+  background: #2c3e50; 
 }
 .btn-download.secondary:hover {
   box-shadow: 0 4px 12px rgba(44, 62, 80, 0.4);

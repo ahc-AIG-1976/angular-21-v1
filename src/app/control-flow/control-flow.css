@@ -2,69 +2,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* Ocupa casi toda la altura de la ventana */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f0f2f5 0%, #e0e6ea 100%); /* Fondo degradado suave */
-  color: #333;
-  padding: 20px;
-  box-sizing: border-box;
-}
+ }
 
 .slider-container {
   background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra suave */
-  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+  padding: 20px;
   max-width: 80%;
   width: 100%;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Para animaciones */
-  min-height: 500px; /* Altura mínima */
+  overflow: hidden; 
+  min-height: 500px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .slide-content {
-  flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Animación de transición */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
   padding: 0 20px;
 }
 
 .slide-image {
   max-width: 100%;
-  max-height: 100%; /* Altura máxima para la imagen */
+  max-height: 100%; 
   margin-bottom: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  object-fit: contain; /* Asegura que la imagen se ajuste sin cortarse */
-}
-
-h2 {
-  font-size: 2.5em;
-  color: #007bff; /* Azul brillante */
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 1.5em;
-  color: #6c757d; /* Gris para el subtítulo */
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
+  object-fit: contain; 
 }
 
 .navigation-dots {
@@ -84,7 +56,7 @@ p {
 }
 
 .dot.active {
-  background-color: #007bff; /* Punto activo azul */
+  background-color: #007bff; 
   transform: scale(1.2);
 }
 
@@ -100,7 +72,7 @@ p {
 }
 
 .nav-button {
-  background-color: rgba(0, 123, 255, 0.8); /* Azul semi-transparente */
+  background-color: rgba(0, 123, 255, 0.8); 
   color: white;
   border: none;
   border-radius: 50%;
@@ -116,7 +88,7 @@ p {
 }
 
 .nav-button:hover {
-  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+  background-color: #0056b3; 
   transform: scale(1.05);
 }
 
