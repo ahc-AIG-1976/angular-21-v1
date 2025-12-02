@@ -1,0 +1,41 @@
+<div class="overlay" (click)="cerrar()">
+  <div class="card" (click)="$event.stopPropagation()">
+    
+    <button class="close-btn" (click)="cerrar()">×</button>
+
+    @if (voteState === 'inicio') {
+      <div class="content fade-in">
+        <h3>GIIIIGIIIIII ¿Qué te ha parecido el tutorial?</h3>
+        <div class="buttons-wrapper">
+          <button class="btn like" (click)="votar('like')">
+            <i class="fas fa-thumbs-up"></i> Me gusta
+          </button>
+          <button class="btn dislike" (click)="votar('dislike')">
+            <i class="fas fa-thumbs-down"></i> No me gusta
+          </button>
+        </div>
+      </div>
+    }
+
+    @if (voteState === 'like') {
+      <div class="content fade-in">
+        <div class="icon-big heart">
+           <i class="fas fa-heart"></i>
+        </div>
+        <h3>¡Muchas Gracias!</h3>
+        <p>Me alegro de que te haya servido.</p>
+      </div>
+    }
+
+    @if (voteState === 'dislike') {
+      <div class="content fade-in">
+        <div class="icon-big angry">
+           <i class="fas fa-angry"></i>
+        </div>
+        <h3>Po haberlo hecho to</h3>
+        <p>(La próxima vez saldrá mejor 😜)</p>
+      </div>
+    }
+
+  </div>
+</div>

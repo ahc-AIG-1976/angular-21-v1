@@ -1,0 +1,89 @@
+/* EL FONDO OSCURO QUE CUBRE TODA LA PANTALLA */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Oscuro transparente */
+  z-index: 99999; /* Siempre encima */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px); /* Efecto borroso elegante */
+}
+
+/* LA TARJETA BLANCA */
+.card {
+  background-color: #ffffff; /* BLANCO FORZADO */
+  color: #333333;            /* TEXTO OSCURO FORZADO */
+  width: 90%;
+  max-width: 400px;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: center;
+  animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Rebote suave */
+}
+
+/* BOTÓN DE CERRAR */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-btn:hover { color: #333; }
+
+/* TEXTOS */
+h3 { margin: 0 0 1rem 0; color: #222; }
+p { color: #666; margin: 0; }
+
+/* BOTONES DE VOTO */
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  transition: transform 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.like { background: #2e7d32; }
+.dislike { background: #c62828; }
+
+/* ICONOS RESULTADO */
+.icon-big { font-size: 4rem; margin-bottom: 1rem; }
+.heart { color: #e91e63; animation: latido 1.2s infinite; }
+.angry { color: #d84315; }
+
+/* ANIMACIONES */
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
