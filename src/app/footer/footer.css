@@ -1,4 +1,3 @@
-/* footer.component.css (actualizado: alineación perfecta al centro del tagline con el emoticono) */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
 .footer {
@@ -31,8 +30,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Cambiado: flex-start para alinear desde arriba, centrado horizontal */
-  width: auto; /* Asegura que no se expanda innecesariamente */
+  justify-content: flex-start;
+  width: auto;
 }
 
 .angular-logo {
@@ -43,22 +42,47 @@
   height: 60px;
   background: white;
   border-radius: 50%;
-  margin-bottom: 0.5rem; /* Espaciado fijo entre emoji y tagline */
+  margin-bottom: 0.5rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .logo-text {
   font-size: 2rem;
-  line-height: 1; /* Asegura que el emoji no tenga espaciado extra vertical */
+  line-height: 1;
 }
 
+/* --- ESTILO NUEVO: BOTÓN DE "¿TE HA GUSTADO?" --- */
+/* Corrección: Quitamos el width: 100% y usamos fit-content */
 .tagline {
   font-size: 0.9rem;
   opacity: 0.9;
-  margin: 0;
-  text-align: center; /* Refuerzo explícito para centrado horizontal */
-  width: 100%; /* Ocupa el ancho del contenedor padre para centrar bien */
+  margin: 0 auto; /* auto ayuda a centrar si hay margen */
+  text-align: center;
+  
+  /* ESTA ES LA CLAVE: Que el ancho se ajuste al texto */
+  width: fit-content; 
+  white-space: nowrap; /* Evita que el texto se parta en dos líneas */
 }
+
+/* El resto sigue igual */
+.tagline.clickable {
+  cursor: pointer;
+  padding: 5px 15px;      /* Un poco más de aire a los lados */
+  border-radius: 20px;
+  transition: all 0.3s;
+  display: inline-block;  /* Necesario para que respete el padding */
+  border: 1px solid transparent;
+}
+
+.tagline.clickable:hover {
+  background-color: white;
+  color: #DD0031;
+  font-weight: bold;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* -------------------------------------------------- */
 
 .links h4,
 .social h4 {
@@ -140,129 +164,6 @@
   }
   
   .logo-section {
-    justify-content: center; /* En móvil, centra verticalmente también si es necesario */
+    justify-content: center;
   }
-
-  /* Estilo para el texto clicable */
-.tagline.clickable {
-  cursor: pointer;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  transition: color 0.3s;
-}
-
-.tagline.clickable:hover {
-  color: #FFD700; /* Dorado al pasar el ratón */
-}
-
-/* --- ESTILOS DEL MODAL (POPUP) --- */
-
-.modal-overlay {
-  /* 1. Ocupar toda la pantalla */
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  
-  /* 2. Fondo oscuro semitransparente */
-  background-color: rgba(0, 0, 0, 0.6); 
-  
-  /* 3. Centrar el contenido vertical y horizontalmente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  /* 4. Asegurar que esté encima de TODO */
-  z-index: 99999; 
-}
-
-.modal-content {
-  /* 5. Apariencia de tarjeta blanca */
-  background-color: white; 
-  color: #333; /* Texto oscuro (importante para que no sea blanco sobre blanco) */
-  
-  padding: 2rem;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  position: relative; /* Para poder posicionar el botón de cerrar */
-}
-
-/* Botón de cerrar (X) */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: #666;
-}
-
-.close-btn:hover {
-  color: #000;
-}
-
-/* Títulos dentro del modal */
-.modal-content h3 {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  color: #DD0031; /* Un toque del color de Angular */
-}
-
-/* Botones de Votar */
-.vote-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.btn-vote {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.2s;
-}
-
-.btn-vote:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* Colores específicos para los botones */
-.btn-vote.like {
-  background-color: #28a745; /* Verde bonito */
-}
-
-.btn-vote.dislike {
-  background-color: #dc3545; /* Rojo alerta */
-}
-
-/* Iconos grandes de respuesta */
-.big-heart {
-  font-size: 4rem;
-  color: #e91e63;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.big-angry {
-  font-size: 4rem;
-  color: #d84315;
-  margin-bottom: 10px;
-  display: block;
-}
 }

@@ -27,41 +27,7 @@
     </div>
   </div>
 
-  @if (isPopupOpen) {
-    <div class="modal-overlay" (click)="closePopup()">
-      <div class="modal-content" (click)="$event.stopPropagation()">
-        
-        <button class="close-btn" (click)="closePopup()">×</button>
-
-        @if (feedbackState === 'inicio') {
-          <h3>¿Qué te ha parecido el tutorial?</h3>
-          <div class="vote-buttons">
-            <button class="btn-vote like" (click)="votar('like')">
-              <i class="fas fa-thumbs-up"></i> Me gusta
-            </button>
-            <button class="btn-vote dislike" (click)="votar('dislike')">
-              <i class="fas fa-thumbs-down"></i> No me gusta
-            </button>
-          </div>
-        }
-
-        @if (feedbackState === 'like') {
-          <div class="feedback-result animate-pop">
-            <i class="fas fa-heart big-heart"></i>
-            <h3>¡Muchas Gracias!</h3>
-            <p>Me alegro de que te haya servido.</p>
-          </div>
-        }
-
-        @if (feedbackState === 'dislike') {
-          <div class="feedback-result animate-pop">
-            <i class="fas fa-angry big-angry"></i>
-            <h3>Po haberlo hecho to</h3>
-            <p>(La próxima vez saldrá mejor 😜)</p>
-          </div>
-        }
-
-      </div>
-    </div>
+  @if (showPopup) {
+    <app-popup (close)="showPopup = false"></app-popup>
   }
 </footer>
